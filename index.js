@@ -104,7 +104,7 @@ async function run() {
 
 
         
-        app.get('/users', async (req, res) => {
+        app.get('https://online-yoga-course-server.vercel.app/users', async (req, res) => {
             const users = await userCollection.find({}).toArray();
             res.send(users);
         })
