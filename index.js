@@ -10,6 +10,18 @@ const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 app.use(cors());
 app.use(express.json());
 
+app.use(cors(
+    {
+        origin:["https://online-yoga-course-server.vercel.app"],
+        methods: ["POST","GET"],
+        credentials: true
+
+
+    }
+
+
+    ));
+
 // Routes
 // SET TOKEN .
 const verifyJWT = (req, res, next) => {
